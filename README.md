@@ -16,6 +16,13 @@ This project consists of a Node.js API and a React user interface (UI) that allo
 
 - **Pure JavaScript:** The UI is developed using pure JavaScript without JSX, allowing for greater control and customization.
 
+## Screenshots
+![Employee Page](resources/Employee.png)
+_(Employee Page)_
+
+![Department Page](resources/Department.png)
+_(Department Page)_
+
 ## Usage Instructions
 
 1. **Clone the Repository:** Clone this repository to your local machine.
