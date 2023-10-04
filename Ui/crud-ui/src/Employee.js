@@ -70,7 +70,7 @@ const Employee = () => {
         modalTitle:"Add Employee",
         EmployeeId:0,
         EmployeeName:"",
-        Department:"IT",
+        Department:"",
         DateOfJoining:"",
         PhotoFileName:"anonymous.png",
         PhotoPath:variables.PHOTO_URL
@@ -89,7 +89,7 @@ const Employee = () => {
         });
     }
     const createClick = () => {
-        console.log(modalState);
+        console.log("Modal State",modalState);
         fetch(variables.API_URL+'employee',{
             method:'POST',
             headers:{
@@ -98,7 +98,7 @@ const Employee = () => {
             },
             body:JSON.stringify({
                 EmployeeName:modalState.EmployeeName,
-                Department:modalState.Department,
+                Department:modalState.Department === '' ? departments[0].DepartmentName : modalState.Department,
                 DateOfJoining:modalState.DateOfJoining,
                 PhotoFileName:modalState.PhotoFileName
             })

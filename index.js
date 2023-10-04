@@ -9,8 +9,8 @@ app.use(bodyParser.urlencoded({extended:true}));
 var mysql = require("mysql");
 var connection = mysql.createConnection({
   host:'localhost',
-  user:'test',
-  password:'testeo',
+  user:'root',
+  password:'',
   database:'NodeProject'
 })
 
@@ -214,5 +214,3 @@ app.post('/api/employee/savefile',(request,response)=>{
         response.json(request.files.file.name);
     })
 })
-
-
